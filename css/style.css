@@ -8,6 +8,10 @@ body, p, h1, ul, li {
 	margin: 0px;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+}
+
 body{
     font-family: Georgia, serif;
     color: #252525;
@@ -31,7 +35,7 @@ a {
 
 .header {
 	background: #d6d3c8;
-	padding: 20px;
+	padding: 20px 0;
 }
 
 .header-menu li a {
@@ -40,16 +44,17 @@ a {
 	padding: 0 10px;
 }
 
+.header-menu ul {
+	display: flex;
+	flex-wrap: wrap;
+}
+
 .header-menu li:first-child a {
 	padding-left: 0px;
 }
 
 @media (max-width: 739px) {
-	.header-logo {
-		float: none;
-	}
 	.header-menu ul {
-		float: none;
 		margin-top: 10px;
 	}
 }
@@ -97,6 +102,35 @@ a {
 }
 .nav-hospedagens::before {
     background-position: 0 -120px;
+}
+
+/* Side-nav responsividade mobile */
+@media (max-width: 767px) {
+	.side-nav {
+		background: none;
+	}
+	.side-nav lu {
+		margin-top: 10px;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.side-nav li {
+		margin-right: 10px;
+		margin-bottom: 10px;
+	}
+	.side-nav li a::before {
+		top: 0;
+		margin: 0;
+	}
+	.side-nav li a {
+		width: 44px;
+		height: 44px;
+		overflow: hidden;
+		padding: 10px;
+		border: none;
+		background: #252525;
+		border-radius: 4px;
+	}
 }
 
 /* Produtos */
